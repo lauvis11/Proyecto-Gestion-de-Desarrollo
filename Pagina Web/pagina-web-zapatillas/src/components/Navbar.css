@@ -1,0 +1,134 @@
+/* Navbar Principal */
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+/* Logo Nike */
+.logo-container {
+  flex-shrink: 0;
+}
+
+.nike-logo {
+  width: 64px;
+  height: 64px;
+  color: #111;
+}
+
+/* Menú Central */
+.menu-container {
+  display: none;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .menu-container {
+    display: flex;
+  }
+}
+
+.menu-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.menu-link:hover {
+  color: #757575;
+}
+
+/* Contenedor de Acciones */
+.actions-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Barra de Búsqueda */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 100px;
+  padding: 8px 16px;
+  width: 176px;
+  transition: all 0.3s ease;
+}
+
+.search-container:hover {
+  background-color: #e5e5e5;
+}
+
+.search-focused {
+  width: 224px;
+  background-color: #e5e5e5;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  color: #757575;
+  flex-shrink: 0;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: 8px;
+  font-size: 14px;
+  color: #111;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: #8d8d8d;
+}
+
+/* Botón del Carrito */
+.cart-button {
+  padding: 8px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-button:hover {
+  background-color: #f5f5f5;
+}
+
+.cart-icon {
+  width: 24px;
+  height: 24px;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .search-container {
+    width: 140px;
+  }
+  
+  .search-focused {
+    width: 180px;
+  }
+}
