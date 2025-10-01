@@ -1,20 +1,25 @@
 import React from "react";
-import Navbar from './components/NavBar' 
+import Navbar from './components/NavBar'
 import Error from './components/error'
+import { Inicio } from "./components/Inicio";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 export const App = () => {
   return (
-    <>
-      <div className="App">
+    <BrowserRouter>
       <Navbar />
-            
-        <main style={{ padding: '24px' }}>
-        <h1>Bienvenido a mi sitio</h1>
-        <p>Contenido de tu página...</p>
+      <main style={{ padding: '24px' }}>
+        <Routes>
+          <Route path="/" element={
+            <Inicio></Inicio>
+          } />
+          <Route path="/*" element={
+            <Error />
+          } />
+        </Routes>
       </main>
-    </div>
-    </>
+    </BrowserRouter>
   )
 }
 
