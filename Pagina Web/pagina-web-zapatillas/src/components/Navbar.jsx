@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Search, ShoppingBag } from 'lucide-react';
 import "../components/Navbar.css"
+import { Link } from 'react-router';
 
 export default function Navbar() {
   const [searchFocused, setSearchFocused] = useState(false);
@@ -21,13 +22,13 @@ export default function Navbar() {
           {/* Menú Central */}
           <div className="menu-container">
             {menuItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
-                href="#"
+                to="/asd"
                 className="menu-link"
               >
                 {item}
-              </a>
+              </Link>
             ))}
           </div>
 
