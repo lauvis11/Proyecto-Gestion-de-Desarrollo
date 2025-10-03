@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, ShoppingBag } from 'lucide-react';
-import "../components/Navbar.css"
+import "./Navbar.css";
 import { Link } from 'react-router';
 
 export default function Navbar() {
