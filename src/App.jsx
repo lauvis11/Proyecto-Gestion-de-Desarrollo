@@ -1,8 +1,10 @@
 import React from "react";
-import Navbar from './components/NavBar'
-import Error from './components/error'
-import { Inicio } from "./components/Inicio";
+import Error from './components/pages/Error'
+import { Inicio } from "./components/pages/Inicio";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/common/Footer";
+import Navbar from "./components/common/Navbar";
+
 
 
 export const App = () => {
@@ -19,6 +21,7 @@ export const App = () => {
           } />
         </Routes>
       </main>
+      <Footer />
     </BrowserRouter>
   )
 }
