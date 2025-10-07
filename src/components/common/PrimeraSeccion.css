@@ -47,9 +47,6 @@
   border-color: #e0e0e0;
 }
 
-.categoria-card.seleccionada .imagen-circulo {
-  border: 3px solid #000000;
-}
 
 .imagen-circulo img {
   width: 100%;
