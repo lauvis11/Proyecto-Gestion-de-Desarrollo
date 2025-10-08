@@ -21,10 +21,10 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Enlaces</h3>
           <ul className="footer-links">
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/zapatillas">Zapatillas</Link></li>
-            <li><Link to="/ofertas">Ofertas</Link></li>
-            <li><Link to="/contacto">Contacto</Link></li>
+            <li><Link to="/*">Inicio</Link></li>
+            <li><Link to="/*">Zapatillas</Link></li>
+            <li><Link to="/*">Ofertas</Link></li>
+            <li><Link to="/*">Contacto</Link></li>
           </ul>
         </div>
 
@@ -32,10 +32,10 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Soporte</h3>
           <ul className="footer-links">
-            <li><Link to="/faq">Preguntas frecuentes</Link></li>
-            <li><Link to="/envios">Envíos</Link></li>
-            <li><Link to="/cambios">Cambios y devoluciones</Link></li>
-            <li><Link to="/politica">Política de privacidad</Link></li>
+            <li><Link to="/*">Preguntas frecuentes</Link></li>
+            <li><Link to="/*">Envíos</Link></li>
+            <li><Link to="/*">Cambios y devoluciones</Link></li>
+            <li><Link to="/*">Política de privacidad</Link></li>
           </ul>
         </div>
 
@@ -43,9 +43,9 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Síguenos</h3>
           <div className="footer-socials">
-            <Link to="#"><Facebook /></Link>
-            <Link to="#"><Instagram /></Link>
-            <Link to="#"><Twitter /></Link>
+            <Link to="/*"><Facebook /></Link>
+            <Link to="/*"><Instagram /></Link>
+            <Link to="/*"><Twitter /></Link>
           </div>
         </div>
       </div>
