@@ -4,6 +4,7 @@ import { Inicio } from "./components/pages/Inicio";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/common/Footer";
 import Navbar from "./components/common/Navbar";
+import { Carrito } from "./components/common/Carrito";
 
 
 
@@ -18,6 +19,9 @@ export const App = () => {
           } />
           <Route path="/*" element={
             <Error />
+          } />
+          <Route path="/carrito" element={
+            <Carrito />
           } />
         </Routes>
       </main>
