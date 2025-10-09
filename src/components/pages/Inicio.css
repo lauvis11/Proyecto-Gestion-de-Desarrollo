@@ -1,0 +1,13 @@
+.hover-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.d-flex {
+  display: flex;
+}
