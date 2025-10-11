@@ -1,13 +1,186 @@
 .hover-card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.hover-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hover-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08);
+  filter: brightness(1.02);
 }
 
+.hover-card:hover::before {
+  opacity: 1;
+}
+
+.hover-card:active {
+  transform: translateY(-2px);
+  transition-duration: 0.1s;
+}
+
+/* Estilos para la imagen del producto */
+.hover-card img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 0;
+}
+
+.hover-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Badge de descuento */
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #000000;
+  color: #ffffff;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+/* Contenedor de información del producto */
+.product-info {
+  padding: 16px;
+  background: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.product-category {
+  font-size: 12px;
+  color: #757575;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+/* Precios */
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.price-original {
+  font-size: 14px;
+  color: #9e9e9e;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.price-sale {
+  font-size: 18px;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.price-discount {
+  font-size: 12px;
+  color: #d32f2f;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* Botón de acción rápida */
+.quick-action {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.hover-card:hover .quick-action {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.quick-action:hover {
+  background: #000000;
+  border-color: #000000;
+}
+
+.quick-action:hover svg {
+  color: #ffffff;
+}
+
+/* Utilidades */
 .d-flex {
   display: flex;
+}
+
+/* Grid para productos */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 24px 0;
+}
+
+/* Modo minimalista alternativo */
+.hover-card.minimal {
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+}
+
+.hover-card.minimal:hover {
+  border-color: #000000;
+  box-shadow: none;
 }
