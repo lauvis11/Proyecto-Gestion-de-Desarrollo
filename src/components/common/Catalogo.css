@@ -1,0 +1,138 @@
+.banners-section {
+  width: 100%;
+  padding: 0;
+  background-color: #ffffff;
+  margin-bottom: 80px;
+}
+
+.banners-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  width: 100%;
+}
+
+.banner {
+  position: relative;
+  height: 460px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+/* Aquí agregas tus imágenes */
+.banner-1 {
+  background-image: url('https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/bf64cd62-573c-40db-bff4-e2e1b3e8788d___48eaa5dd73a4dae1130011fde87d6495.jpg');
+}
+
+.banner-2 {
+  background-image: url('https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/bfaf90cf-0beb-4bce-943d-85dddffa2b2f___73b01c2b6d48472cdf2d6a7fce04b816.jpg');
+}
+
+.banner-3 {
+  background-image: url('https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/2efc8c72-761c-4057-831d-51deb641508d___c9a6cde855be4d8bcce0f38a6998be09.jpg');
+}
+
+.banner-4 {
+  background-image: url('https://nikearprod.vtexassets.com/assets/vtex.file-manager-graphql/images/f421307b-fe31-4541-a0c7-98dcb35869f0___e8dc3250b164147717425bc176458add.jpg');
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  z-index: 2;
+}
+
+.banner-titulo {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-subtitulo {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  max-width: 280px;
+  line-height: 1.4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner-boton {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.banner-boton:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.banner-boton:active {
+  transform: scale(0.98);
+}
+
+/* Responsive para tablets */
+@media (max-width: 1024px) {
+  .banner {
+    height: 500px;
+  }
+
+  .banner-titulo {
+    font-size: 24px;
+  }
+
+  .banner-subtitulo {
+    font-size: 16px;
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .banners-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .banner {
+    height: 450px;
+  }
+
+  .banner-content {
+    bottom: 30px;
+    left: 30px;
+  }
+
+  .banner-titulo {
+    font-size: 22px;
+  }
+
+  .banner-subtitulo {
+    font-size: 15px;
+    max-width: 250px;
+  }
+
+  .banner-boton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
