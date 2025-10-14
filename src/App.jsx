@@ -7,7 +7,6 @@ import Navbar from "./components/common/Navbar";
 import { Carrito } from "./components/common/Carrito";
 
 
-
 export const App = () => {
   return (
     <BrowserRouter>
