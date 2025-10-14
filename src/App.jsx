@@ -12,7 +12,7 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <main style={{ padding: '24px' }}>
+      <main>
         <Routes>
           <Route path="/" element={
             <Inicio></Inicio>

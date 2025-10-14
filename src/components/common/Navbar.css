@@ -32,7 +32,7 @@
 .menu-container {
   display: none;
   align-items: center;
-  gap: 24px;
+  gap: 40px;
 }
 
 @media (min-width: 768px) {
