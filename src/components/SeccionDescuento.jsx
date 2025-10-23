@@ -4,31 +4,37 @@ import productosDescuentos from '../helpers'
 
 const SeccionDescuento = () => {
   return (
-    <div className='d-flex justify-content-center flex-wrap gap-5'>   
-      {productosDescuentos.map((producto, idx) => (
-        <Card className="hover-card" key={idx} style={{ width: '18rem' }}>
-          <Card.Img style={{ 
-          height: '200px', 
-          objectFit: 'cover',
-          width: '100%'
-        }} 
-         variant="top" src={producto.img} />
-          <Card.Body>
-            <Card.Title>{producto.nombre}</Card.Title>
-            <Card.Text className='d-flex justify-content-start gap-3'>
-               <strong className='me-2 text-danger'>${producto.precioDescuento}</strong>
-               <s>${producto.precioOriginal}</s>
-            </Card.Text>
-            <Card.Text>
-              {producto.descripcion}
-            </Card.Text>
-            <Button variant="primary">Comprar</Button>
-          </Card.Body>
-        </Card>
-      ))}
+    <div className='d-flex flex-column align-items-center'>
+      <h2 className='mb-4 text-center fw-bold'>Productos en descuento</h2>
+
+      <div className='d-flex justify-content-center flex-wrap gap-5'>
+        {productosDescuentos.map((producto, idx) => (
+          <Card className="hover-card" key={idx} style={{ width: '18rem' }}>
+            <Card.Img 
+              style={{ 
+                height: '200px', 
+                objectFit: 'cover',
+                width: '100%'
+              }} 
+              variant="top" 
+              src={producto.img} 
+            />
+            <Card.Body>
+              <Card.Title>{producto.nombre}</Card.Title>
+              <Card.Text className='d-flex justify-content-start gap-3'>
+                <strong className='me-2 text-danger'>${producto.precioDescuento}</strong>
+                <s>${producto.precioOriginal}</s>
+              </Card.Text>
+              <Card.Text>
+                {producto.descripcion}
+              </Card.Text>
+              <Button variant="primary">Comprar</Button>
+            </Card.Body>
+          </Card>
+        ))}
+      </div>
     </div>
   )
 }
-
 
 export default SeccionDescuento
