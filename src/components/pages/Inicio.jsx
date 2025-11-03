@@ -1,4 +1,4 @@
-import { PrimeraSeccion } from '../common/Primeraseccion'
+import { PrimeraSeccion } from '../common/PrimeraSeccion'
 import SeccionDescuento from '../SeccionDescuento'
 import Catalogo from '../common/Catalogo'
 import FormasDePago from '../common/FormasDePago'
